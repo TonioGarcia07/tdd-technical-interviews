@@ -1,2 +1,3 @@
-# tdd-technical-interviews
-Repo for technical interviews using TDD
+# Technical interviews (using TDD)
+
+This repo aims at providing a simple environment to perform technical interviews using jest.
