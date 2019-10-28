@@ -1,4 +1,4 @@
-import functionToTest from "./index";
+import functionToTest from "./exo1";
 
 it("functionToTest", () => {
   const result = functionToTest("");
