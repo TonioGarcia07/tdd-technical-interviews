@@ -8,17 +8,25 @@
  * Return true if there is a winner, false otherwise.
  *
  * ************************************************************************
+ *
+ * Simple and fun problem but good to test ability to modularize, write
+ * simple and well-documented code.
  */
 
 export const validGame = (game: string[][]): boolean => {
+  // Game invalid - incorrect dimensions
   if (game.find(row => row.length !== game.length)) {
     return false;
   }
+
   const letters = [...game[0], ...game[1], ...game[2]].filter(l => l !== "");
   const set = new Set(letters);
+  // Game invalid - too many letters
   if (set.size > 2) {
     return false;
   }
+
+  // Game invalid - one letter is present too often
   const hist = {};
   letters.forEach(letter => {
     if (!hist[letter]) {
