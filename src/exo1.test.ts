@@ -1,8 +1,10 @@
-import functionToTest from "./exo1";
+import findSubstringPermutations from "./exo1";
 
-it("functionToTest", () => {
-  const result = functionToTest("");
-  const expected = "";
+describe("findSubstringPermutations", () => {
+  it("big startsWith small", () => {
+    const result = findSubstringPermutations("ab", "abcdea");
+    const expected = [0];
 
-  expect(result).toEqual(expected);
+    expect(result).toEqual(expected);
+  });
 });
