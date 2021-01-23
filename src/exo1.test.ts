@@ -1,10 +1,8 @@
-import findSubstringPermutations from "./exo1";
+import findLongestSubstring from "./exo1";
 
-describe("findSubstringPermutations", () => {
-  it("big startsWith small", () => {
-    const result = findSubstringPermutations("ab", "abcdea");
-    const expected = [0];
-
-    expect(result).toEqual(expected);
-  });
+it("findLongestSubstring", () => {
+  expect(findLongestSubstring("hello")).toEqual("el");
+  expect(findLongestSubstring("abcabcdeabcdef")).toEqual("abcdef");
+  expect(findLongestSubstring("abcabcde")).toEqual("abcde");
+  expect(findLongestSubstring("polyconseil")).toEqual("eil");
 });
